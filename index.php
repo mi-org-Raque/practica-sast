@@ -1,11 +1,11 @@
 <?php
-// ❌ Hardcoded secret
-$password = "123456";
+// Hardcoded secret
+$password = getenv("PASSWORD"); 
 
-// ❌ SQL Injection
+// SQL Injection
 $id = $_GET['id'];
 $query = "SELECT * FROM users WHERE id = " . $id;
 
-// ❌ Uso inseguro
+// Uso inseguro
 eval($_GET['code']);
 ?>
